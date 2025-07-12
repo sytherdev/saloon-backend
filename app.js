@@ -14,8 +14,8 @@ app.use(express.urlencoded({ extended: true, limit: '5mb' }))
 
 // Middleware
 app.use(cors({
-    origin: '*',   // ✅ exactly match frontend origin
-    credentials: true                  // ✅ allow cookies/auth headers
+    origin: 'https://saloon-sooty.vercel.app',  // ✅ set to your frontend domain
+    credentials: true
 }));
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
